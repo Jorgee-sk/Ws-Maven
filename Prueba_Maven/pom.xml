@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.babel</groupId>
+  <artifactId>Prueba_Maven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Prueba_Maven</name>
+  
+  
+  <!-- HAY QUE HACER UPDATE DEL MAVEN PROJECT SIEMPRE QUE CAMBIEMOS ALGUNA PROPIEDAD -->
+  <properties>
+	  <maven.compiler.target>11</maven.compiler.target>
+	  <maven.compiler.source>11</maven.compiler.source>
+  </properties>
+  
+  <!-- El repo local de maven es donde se guardan los artifacts bajados de los repositorios 
+  remotos de maven, se encuentra en la carpeta
+  C:/usuario/.m2  -->
+  <dependencies>
+  <!-- Aqui irian las dependencias -->
+  </dependencies>
+  
+</project>
