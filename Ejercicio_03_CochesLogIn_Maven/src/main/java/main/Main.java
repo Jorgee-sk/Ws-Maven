@@ -266,7 +266,7 @@ public class Main {
 
 			try {
 				HttpRequest request = HttpRequest.newBuilder()
-						.uri(new URI("http://localhost:8080/Ejercicio_WebLogin/usuarios/login?nombre="
+						.uri(new URI("http://localhost:8080/Ejercicio_WebLogin/usuarios/login?usuario="
 								+ nombre + "&password=" + contra))
 						.GET().build();
 

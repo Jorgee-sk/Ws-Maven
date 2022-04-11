@@ -21,6 +21,12 @@ public class DaoCocheMySql implements DaoCoche{
 		String usuario = "root";
 		String password = "";
 		try {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			conexion = DriverManager.getConnection(url,usuario,password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
