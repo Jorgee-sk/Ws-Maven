@@ -38,7 +38,6 @@ public class PrimerServlet extends HttpServlet {
 		boolean validado;
 		
 		Usuario aux = new Usuario(-1,request.getParameter("usuario"),request.getParameter("password"));
-		System.out.println(aux.getUser()+aux.getContrasenia());
 		validado=daoUsuario.obtener(aux);
 
 		JSONObject json = new JSONObject();
@@ -53,8 +52,19 @@ public class PrimerServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		daoUsuario = new DaoUsuarioMySql();
+		boolean validado;
+		
+		Usuario aux = new Usuario(-1,request.getParameter("usuario"),request.getParameter("password"));
+		validado=daoUsuario.obtener(aux);
+
+		JSONObject json = new JSONObject();
+		json.put("validado", validado);
+
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+	    response.getWriter().write(json.toString());
 	}
 
 }
