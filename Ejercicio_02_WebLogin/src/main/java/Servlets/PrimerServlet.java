@@ -34,6 +34,11 @@ public class PrimerServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+	    response.addHeader("Access-Control-Allow-Origin", "*");
+	    
 		daoUsuario = new DaoUsuarioMySql();
 		boolean validado;
 		
@@ -43,8 +48,6 @@ public class PrimerServlet extends HttpServlet {
 		JSONObject json = new JSONObject();
 		json.put("validado", validado);
 
-		response.setContentType("application/json");
-		response.setCharacterEncoding("UTF-8");
 	    response.getWriter().write(json.toString());
 	}
 
