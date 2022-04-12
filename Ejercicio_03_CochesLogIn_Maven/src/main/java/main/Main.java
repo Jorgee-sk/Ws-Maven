@@ -277,6 +277,8 @@ public class Main {
 				JSONObject json = new JSONObject(response.body());
 				contraBoolean = json.getBoolean("validado"); 
 				
+				if(contraBoolean == false)
+					System.out.println("Credenciales incorrectos");
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
